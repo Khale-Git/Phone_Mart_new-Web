@@ -1,0 +1,368 @@
+/* ===== USERS CONTAINER ===== */
+.users-container {
+  max-width: 1200px;
+  /* Adjust margin for larger screens to give space */
+  margin: 40px auto; 
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: box-shadow 0.3s ease;
+  width: 100%; /* Ensure fluidity */
+  box-sizing: border-box;
+}
+
+.users-container:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== HEADING ===== */
+.users-container h2 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  border-left: 6px solid #4CAF50;
+  padding-left: 10px;
+  letter-spacing: 0.5px;
+}
+
+/* ===== ADD BUTTON ===== */
+.users-container .add-btn {
+  background: #4CAF50;
+  color: white;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.users-container .add-btn:hover {
+  background: #43a047;
+  transform: scale(1.05);
+}
+
+/* ===== TABLE ===== */
+.users-container table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  animation: fadeInUp 0.5s ease;
+  table-layout: auto;
+}
+
+/* ===== TABLE HEADER ===== */
+.users-container thead th {
+  background: linear-gradient(135deg, #4CAF50, #2e8b57);
+  color: #fff;
+  padding: 14px 16px;
+  text-align: left;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+/* ===== TABLE BODY ===== */
+.users-container tbody td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+  color: #333;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+/* ===== ROW STRIPING ===== */
+.users-container tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+/* ===== ROW HOVER ===== */
+.users-container tbody tr:hover {
+  background-color: #e9f7ef;
+  transition: all 0.2s ease;
+}
+
+/* ===== ACTION CELL FIX ===== */
+.users-container td:last-child {
+  min-width: 200px; /* ensures enough space for both buttons */
+  text-align: left;
+}
+
+/* ===== ACTION BUTTONS ===== */
+.users-container .action-cell {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px; /* space between edit and delete buttons */
+}
+
+.users-container .action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 7px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.1s ease;
+  white-space: nowrap;
+}
+
+.users-container .action-btn:hover {
+  transform: scale(1.05);
+}
+
+.users-container .edit-btn {
+  background: #2196F3;
+  color: #fff;
+}
+
+.users-container .edit-btn:hover {
+  background: #1976D2;
+}
+
+.users-container .delete-btn {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.users-container .delete-btn:hover {
+  background: #c0392b;
+}
+
+/* ===== EMPTY/N-A CELLS ===== */
+.users-container tbody td:empty:before,
+.users-container tbody td[data-value="N/A"]::before {
+  content: "N/A";
+  color: #bbb;
+  font-style: italic;
+}
+
+/* ===== MODAL STYLING ===== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.3s ease;
+  box-sizing: border-box;
+}
+
+.modal h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+.modal form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+.modal form input {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+/* ===== MODAL BUTTONS ===== */
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.modal-buttons button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.modal-buttons button:hover {
+  transform: scale(1.05);
+}
+
+.modal-buttons button[type="submit"] {
+  background: #4CAF50;
+  color: #fff;
+}
+
+.modal-buttons button[type="submit"]:hover {
+  background: #43a047;
+}
+
+.modal-buttons button[type="button"] {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.modal-buttons button[type="button"]:hover {
+  background: #c0392b;
+}
+
+/*
+|----------------------------------------------------
+| 1. Tablet/Small Desktop Adjustments (<= 768px)
+|----------------------------------------------------
+*/
+@media (max-width: 768px) {
+  .users-container {
+    padding: 15px;
+    margin: 20px auto; /* Reduce outer margin */
+  }
+
+  /* Force table to scroll horizontally */
+  .users-container table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-radius: 8px;
+  }
+
+  .users-container h2 {
+    font-size: 1.4rem;
+    text-align: center;
+    border: none;
+    padding-left: 0;
+    margin-bottom: 15px;
+  }
+
+  .users-container thead th,
+  .users-container tbody td {
+    padding: 10px 12px;
+  }
+
+  .users-container td:last-child {
+    min-width: 180px;
+  }
+
+  .users-container .action-btn {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+/*
+|----------------------------------------------------
+| 🚨 2. Mobile Phone Adjustments (<= 576px)
+|----------------------------------------------------
+*/
+@media (max-width: 576px) {
+    .users-container {
+        padding: 5px; /* Minimal padding */
+        margin: 0; /* Full screen width */
+        border-radius: 0;
+        box-shadow: none;
+    }
+    
+    .users-container h2 {
+        font-size: 1.2rem;
+    }
+
+    .users-container .add-btn {
+        width: 100%; /* Full width button */
+        padding: 12px;
+        margin-bottom: 10px;
+    }
+
+    /* Table: ensure minimum visibility */
+    .users-container table {
+        box-shadow: none;
+    }
+
+    .users-container thead th,
+    .users-container tbody td {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+
+    .users-container td:last-child {
+        min-width: 150px; /* Reduced minimum width for action buttons */
+    }
+
+    /* Action buttons: Tighter spacing and smaller size */
+    .users-container .action-cell {
+        gap: 5px;
+    }
+    
+    .users-container .action-btn {
+        padding: 4px 8px;
+        font-size: 0.75rem;
+    }
+
+    /* Modal: Ensure it dominates the screen */
+    .modal {
+        max-width: 95%;
+        margin: 0 2.5%;
+        padding: 20px;
+    }
+    
+    .modal form input {
+        padding: 10px;
+    }
+
+    .modal-buttons {
+        flex-direction: column; /* Stack buttons vertically for easier tapping */
+        gap: 8px;
+    }
+    
+    .modal-buttons button {
+        width: 100%; /* Full width stacked buttons */
+        padding: 10px;
+    }
+}
+
+/* ===== ANIMATIONS (Unchanged) ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

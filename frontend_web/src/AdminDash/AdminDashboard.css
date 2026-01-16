@@ -1,0 +1,180 @@
+/* Main Page Background - Phone Mart Orange Theme */
+.admin-container {
+  padding: 40px;
+  background-color: #ffcc99; /* Matching your orange theme */
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* The White Card Container */
+.admin-card {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  padding: 30px;
+  overflow: hidden; /* Keeps child elements inside rounded corners */
+}
+
+/* Header Section */
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.admin-header h1 {
+  font-size: 1.8rem;
+  color: #333;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* The Black Pill Counter */
+.order-count {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Table Styling */
+.table-responsive {
+  overflow-x: auto;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px; /* Space between rows */
+}
+
+.orders-table th {
+  text-align: left;
+  padding: 15px 20px;
+  color: #888;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Table Rows (Card-like effect for rows) */
+.orders-table tbody tr {
+  background-color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.orders-table tbody tr:hover {
+  background-color: #fafafa;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.orders-table td {
+  padding: 15px 20px;
+  vertical-align: middle;
+  border-bottom: 1px solid #f0f0f0;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+/* Product Column (Image + Text) */
+.product-col {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.order-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid #eee;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-name {
+  font-weight: 600;
+  color: #222;
+}
+
+.order-id {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+/* Price Column */
+.price-col {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 700;
+  color: #333;
+}
+
+/* Status Badges */
+.status-badge {
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  display: inline-block;
+  min-width: 90px;
+  text-align: center;
+}
+
+.status-badge.completed { background-color: #d1fae5; color: #065f46; }
+.status-badge.pending   { background-color: #fef9c3; color: #854d0e; }
+.status-badge.processing{ background-color: #dbeafe; color: #1e40af; }
+.status-badge.cancelled { background-color: #fee2e2; color: #991b1b; }
+
+/* Dropdown styling */
+.status-select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.status-select:focus {
+  border-color: #ffcc99;
+}
+
+/* Payment Method */
+.payment-info {
+  font-weight: 500;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.loading-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffcc99;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}

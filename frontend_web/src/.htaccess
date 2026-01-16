@@ -1,0 +1,59 @@
+This file should be placed in the public/ or root directory of your SPA.
+
+==================================================
+
+🚀 Enable URL rewriting
+
+==================================================
+
+RewriteEngine On
+
+==================================================
+
+🔒 Force HTTPS (Redirects all HTTP traffic to HTTPS)
+
+==================================================
+
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+==================================================
+
+⛔ Do not rewrite requests for assets, images, or PHP files
+
+==================================================
+
+Ensures PHP files (like login.php) are executed directly.
+
+RewriteCond %{REQUEST_URI} !^assets/ [NC]
+RewriteCond %{REQUEST_URI} !^favicon.ico$ [NC]
+RewriteCond %{REQUEST_URI} !.(php)$ [NC]
+
+==================================================
+
+🗂 Only rewrite if file or directory does not exist
+
+==================================================
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+==================================================
+
+🔄 Redirect everything else to index.html (SPA Entry Point)
+
+==================================================
+
+RewriteRule ^ index.html [QSA,L]
+
+==================================================
+
+⚠ Optional: Security headers (recommended)
+
+==================================================
+
+<IfModule mod_headers.c>
+Header set X-Content-Type-Options "nosniff"
+Header set X-Frame-Options "SAMEORIGIN"
+Header set X-XSS-Protection "1; mode=block"
+</IfModule>
