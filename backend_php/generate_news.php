@@ -102,7 +102,13 @@ try {
     }
 
     // --- GEMINI API CALL ---
-    $apiKey = 'AIzaSyBHXv2b_QNdNX5xPJf5RbywX3_lmQ3CF5U'; 
+  // Load the API Key safely from the environment
+$apiKey = getenv('GOOGLE_API_KEY');
+
+// Fallback check (optional, helps you debug if it's missing)
+if (!$apiKey) {
+    die("Error: Google API Key not found in environment variables.");
+}
     $apiBaseUrl = 'https://generativelanguage.googleapis.com/v1beta'; // Standard Gemini API Base URL
     $headers = []; 
     $queryParams = []; // <--- NEW ARGUMENT: Empty array for query parameters
