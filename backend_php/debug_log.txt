@@ -1,0 +1,11 @@
+{"product_id":1,"product_name":"iPhone 13","product_description":"Latest model with A15 Bionic chip","price":73000,"image_url":"https:\/\/www.bing.com\/th?id=OIP.pKgUChh3jFH-Oc9ZNzWNqgHaFA&w=190&h=185&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2","quantity":1}
+{"product_id":2,"product_name":"Samsung Galaxy S21","product_description":"Flagship model with AMOLED display","price":88500,"image_url":"https:\/\/th.bing.com\/th\/id\/OIP.oKCm0Bwp3C_ZEk16ADqPigHaHa?pid=ImgDet&w=178&h=178&c=7&dpr=1.5","quantity":1}
+null
+null
+null
+null
+null
+{"product_id":3,"product_name":"Google Pixel 6","product_description":"New phone with Google Tensor chip","price":38000,"image_url":"https:\/\/www.bing.com\/th?id=OIP.GTlg2SDK3aK8OnUfEzUIkgHaEK&w=202&h=200&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2","quantity":1}
+{"product_id":4,"product_name":"Google Pixel 8 pro","product_description":"Pixel 8 Pro, the First Smartphone with Google AI built-in\r\nThe new Google Tensor G3 chip is custom-designed with Google AI for cutting-edge photo and video features on Google ","price":88000,"image_url":"https:\/\/www.bing.com\/th?id=OIP.mMuoq3g7Z0imWBOzOE_QJgHaEK&w=314&h=200&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2","quantity":1}
+null
+null

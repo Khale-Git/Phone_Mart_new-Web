@@ -1,0 +1,29 @@
+{
+    "name": "ian/phone_mart",
+    "description": "A phone mart project",
+    "type": "project",
+    "require": {
+        "vlucas/phpdotenv": "^5.5",
+        "symfony/http-client": "^7.3",
+        "nyholm/psr7": "^1.8",
+        "psr/http-client": "^1.0",
+        "php": ">=7.4",
+        "google-gemini-php/client": "^2.7",
+        "php-http/curl-client": "^2.3",
+        "php-http/message-factory": "^1.1",
+        "psr/http-message": "^2.0"  
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ian Kiromo",
+            "email": "ikiromo9@gmail.com"
+        }
+    ],
+    "minimum-stability": "beta", 
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
+}
